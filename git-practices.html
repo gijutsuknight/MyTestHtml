@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Commit Best Practices - GijutsuKnight</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- External Libraries -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="index.html" class="logo-text">GijutsuKnight</a>
+        </div>
+
+        <div class="nav-menu" id="navMenu">
+          <a href="index.html" class="nav-link">Portfolio</a>
+          <a href="index.html#about" class="nav-link">About</a>
+          <a href="index.html#skills" class="nav-link">Skills</a>
+          <a href="index.html#roles" class="nav-link">Roles</a>
+          <a href="index.html#projects" class="nav-link">Projects</a>
+          <a href="index.html#contact" class="nav-link">Contact</a>
+          <a href="git-practices.html" class="nav-link active">Git Practices</a>
+        </div>
+
+        <div class="nav-controls">
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <div class="hero-container">
+          <div class="hero-content">
+            <div class="hero-text">
+              <h1 class="hero-title">
+                <span class="greeting">Git Commit</span>
+                <span class="name">Best Practices</span>
+                <span class="title">Professional Development Workflow</span>
+              </h1>
+              <p class="hero-description">
+                Master the art of writing clear, meaningful commit messages and
+                maintaining a clean Git history for better collaboration and
+                project management.
+              </p>
+              <div class="hero-buttons">
+                <a href="#commit-messages" class="btn btn-primary">
+                  <i class="fas fa-code"></i>
+                  Commit Messages
+                </a>
+                <a href="#workflow" class="btn btn-secondary">
+                  <i class="fas fa-sitemap"></i>
+                  Workflow
+                </a>
+              </div>
+            </div>
+
+            <div class="hero-image">
+              <div class="image-container">
+                <div class="profile-image">
+                  <i
+                    class="fab fa-git-alt"
+                    style="
+                      font-size: 200px;
+                      color: var(--primary-color);
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      height: 100%;
+                    "
+                  ></i>
+                </div>
+                <div class="floating-elements">
+                  <div class="floating-icon" style="--delay: 0s">
+                    <i class="fab fa-github"></i>
+                  </div>
+                  <div class="floating-icon" style="--delay: 1s">
+                    <i class="fas fa-code-branch"></i>
+                  </div>
+                  <div class="floating-icon" style="--delay: 2s">
+                    <i class="fas fa-merge"></i>
+                  </div>
+                  <div class="floating-icon" style="--delay: 3s">
+                    <i class="fas fa-history"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Commit Messages Section -->
+      <section class="about" id="commit-messages">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Commit Message Guidelines</h2>
+            <p class="section-subtitle">
+              Write clear, meaningful commit messages
+            </p>
+          </div>
+
+          <div class="about-content">
+            <div class="about-text">
+              <div class="about-intro">
+                <h3>The 7 Rules of Great Commit Messages</h3>
+                <p>
+                  A well-written commit message is crucial for maintaining a
+                  clean project history and enabling effective collaboration.
+                  Follow these proven guidelines to write professional commit
+                  messages.
+                </p>
+              </div>
+
+              <div class="git-rules">
+                <div class="rule-item">
+                  <div class="rule-number">1</div>
+                  <div class="rule-content">
+                    <h4>Separate subject from body with a blank line</h4>
+                    <p>
+                      This helps with readability and allows tools to parse the
+                      commit properly.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="rule-item">
+                  <div class="rule-number">2</div>
+                  <div class="rule-content">
+                    <h4>Limit the subject line to 50 characters</h4>
+                    <p>
+                      Keep it concise and to the point. This ensures it displays
+                      well in various Git tools.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="rule-item">
+                  <div class="rule-number">3</div>
+                  <div class="rule-content">
+                    <h4>Capitalize the subject line</h4>
+                    <p>
+                      Use proper capitalization for consistency and
+                      professionalism.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="rule-item">
+                  <div class="rule-number">4</div>
+                  <div class="rule-content">
+                    <h4>Do not end the subject line with a period</h4>
+                    <p>
+                      Keep it clean and consistent with other commit messages.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="rule-item">
+                  <div class="rule-number">5</div>
+                  <div class="rule-content">
+                    <h4>Use the imperative mood in the subject line</h4>
+                    <p>
+                      Write as if giving a command: "Add feature" not "Added
+                      feature" or "Adds feature".
+                    </p>
+                  </div>
+                </div>
+
+                <div class="rule-item">
+                  <div class="rule-number">6</div>
+                  <div class="rule-content">
+                    <h4>Wrap the body at 72 characters</h4>
+                    <p>
+                      This ensures readability in various terminal and email
+                      clients.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="rule-item">
+                  <div class="rule-number">7</div>
+                  <div class="rule-content">
+                    <h4>Use the body to explain what and why vs. how</h4>
+                    <p>
+                      Focus on the reasoning behind the change, not the
+                      implementation details.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-image">
+              <div class="code-example">
+                <h4>Good Commit Message Example</h4>
+                <div class="code-block">
+                  <pre><code>feat: add user authentication system
+
+Implement JWT-based authentication with login/logout
+functionality. This resolves the security requirements
+for user management and enables role-based access control.
+
+- Add JWT token generation and validation
+- Create login/logout API endpoints
+- Implement password hashing with bcrypt
+- Add middleware for protected routes
+
+Closes #123</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Commit Types Section -->
+      <section class="skills" id="commit-types">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Conventional Commits</h2>
+            <p class="section-subtitle">Standardized commit message format</p>
+          </div>
+
+          <div class="skills-content">
+            <div class="skills-categories">
+              <div class="skill-category">
+                <h3>Commit Types</h3>
+                <div class="skill-items">
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">feat</span>
+                      <span class="skill-percentage">New Feature</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" data-width="100%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">fix</span>
+                      <span class="skill-percentage">Bug Fix</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" data-width="100%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">docs</span>
+                      <span class="skill-percentage">Documentation</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" data-width="100%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">style</span>
+                      <span class="skill-percentage">Code Style</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" data-width="100%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">refactor</span>
+                      <span class="skill-percentage">Code Refactor</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" data-width="100%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">test</span>
+                      <span class="skill-percentage">Tests</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" data-width="100%"></div>
+                    </div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-info">
+                      <span class="skill-name">chore</span>
+                      <span class="skill-percentage">Maintenance</span>
+                    </div>
+                    <div class="skill-bar">
+                      <div class="skill-progress" data-width="100%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-category">
+                <h3>Examples</h3>
+                <div class="commit-examples">
+                  <div class="example-item">
+                    <code>feat(auth): add OAuth2 integration</code>
+                  </div>
+                  <div class="example-item">
+                    <code>fix(api): resolve memory leak in user service</code>
+                  </div>
+                  <div class="example-item">
+                    <code>docs(readme): update installation instructions</code>
+                  </div>
+                  <div class="example-item">
+                    <code>style(components): format code with prettier</code>
+                  </div>
+                  <div class="example-item">
+                    <code
+                      >refactor(utils): extract common validation logic</code
+                    >
+                  </div>
+                  <div class="example-item">
+                    <code>test(auth): add unit tests for login flow</code>
+                  </div>
+                  <div class="example-item">
+                    <code
+                      >chore(deps): update dependencies to latest versions</code
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tech-stack">
+              <h3>Tools & Extensions</h3>
+              <div class="tech-grid">
+                <div class="tech-item">
+                  <i class="fab fa-git-alt"></i>
+                  <span>Git</span>
+                </div>
+                <div class="tech-item">
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </div>
+                <div class="tech-item">
+                  <i class="fab fa-gitlab"></i>
+                  <span>GitLab</span>
+                </div>
+                <div class="tech-item">
+                  <i class="fas fa-code-branch"></i>
+                  <span>Git Flow</span>
+                </div>
+                <div class="tech-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Husky</span>
+                </div>
+                <div class="tech-item">
+                  <i class="fas fa-tools"></i>
+                  <span>Commitizen</span>
+                </div>
+                <div class="tech-item">
+                  <i class="fas fa-robot"></i>
+                  <span>Conventional Changelog</span>
+                </div>
+                <div class="tech-item">
+                  <i class="fas fa-shield-alt"></i>
+                  <span>Commitlint</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Workflow Section -->
+      <section class="projects" id="workflow">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Git Workflow Best Practices</h2>
+            <p class="section-subtitle">Professional development workflow</p>
+          </div>
+
+          <div class="workflow-grid">
+            <div class="workflow-card">
+              <div class="workflow-icon">
+                <i class="fas fa-seedling"></i>
+              </div>
+              <h3>Branch Naming</h3>
+              <p>
+                Use descriptive branch names that indicate the purpose and scope
+                of changes.
+              </p>
+              <div class="workflow-examples">
+                <code>feature/user-authentication</code>
+                <code>fix/payment-gateway-error</code>
+                <code>hotfix/security-patch</code>
+                <code>chore/update-dependencies</code>
+              </div>
+            </div>
+
+            <div class="workflow-card">
+              <div class="workflow-icon">
+                <i class="fas fa-code-branch"></i>
+              </div>
+              <h3>Branch Strategy</h3>
+              <p>
+                Follow a consistent branching model like Git Flow or GitHub Flow
+                for better organization.
+              </p>
+              <div class="workflow-examples">
+                <code>main/master</code>
+                <code>develop</code>
+                <code>feature/*</code>
+                <code>hotfix/*</code>
+              </div>
+            </div>
+
+            <div class="workflow-card">
+              <div class="workflow-icon">
+                <i class="fas fa-history"></i>
+              </div>
+              <h3>Commit Frequency</h3>
+              <p>
+                Make small, frequent commits that represent logical units of
+                work. Avoid large, monolithic commits.
+              </p>
+              <div class="workflow-examples">
+                <code>One logical change per commit</code>
+                <code>Commit early and often</code>
+                <code>Test before committing</code>
+                <code>Review before pushing</code>
+              </div>
+            </div>
+
+            <div class="workflow-card">
+              <div class="workflow-icon">
+                <i class="fas fa-merge"></i>
+              </div>
+              <h3>Pull Request Process</h3>
+              <p>
+                Use pull requests for code review, discussion, and maintaining
+                code quality standards.
+              </p>
+              <div class="workflow-examples">
+                <code>Clear PR description</code>
+                <code>Link related issues</code>
+                <code>Request specific reviewers</code>
+                <code>Pass all CI checks</code>
+              </div>
+            </div>
+
+            <div class="workflow-card">
+              <div class="workflow-icon">
+                <i class="fas fa-undo"></i>
+              </div>
+              <h3>History Management</h3>
+              <p>
+                Keep a clean, linear history when possible. Use rebase for
+                feature branches before merging.
+              </p>
+              <div class="workflow-examples">
+                <code>git rebase -i</code>
+                <code>git squash</code>
+                <code>git amend</code>
+                <code>git reset</code>
+              </div>
+            </div>
+
+            <div class="workflow-card">
+              <div class="workflow-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Security & Safety</h3>
+              <p>
+                Never commit sensitive information. Use .gitignore and
+                environment variables for secrets.
+              </p>
+              <div class="workflow-examples">
+                <code>Never commit passwords</code>
+                <code>Use .gitignore</code>
+                <code>Environment variables</code>
+                <code>Pre-commit hooks</code>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tools Section -->
+      <section class="contact" id="tools">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Essential Git Tools</h2>
+            <p class="section-subtitle">Tools to enhance your Git workflow</p>
+          </div>
+
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-terminal"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>Command Line</h3>
+                  <p>
+                    Master essential Git commands for efficient version control
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-desktop"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>GUI Tools</h3>
+                  <p>
+                    Use visual tools like SourceTree, GitKraken, or VS Code Git
+                    integration
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-plug"></i>
+                </div>
+                <div class="contact-details">
+                  <h3>Hooks & Automation</h3>
+                  <p>
+                    Implement pre-commit hooks and automated checks for code
+                    quality
+                  </p>
+                </div>
+              </div>
+
+              <div class="social-links">
+                <h3>Resources</h3>
+                <div class="social-icons">
+                  <a
+                    href="https://git-scm.com/doc"
+                    class="social-link"
+                    title="Git Documentation"
+                  >
+                    <i class="fas fa-book"></i>
+                  </a>
+                  <a
+                    href="https://conventionalcommits.org/"
+                    class="social-link"
+                    title="Conventional Commits"
+                  >
+                    <i class="fas fa-file-alt"></i>
+                  </a>
+                  <a
+                    href="https://github.com/commitizen/cz-cli"
+                    class="social-link"
+                    title="Commitizen"
+                  >
+                    <i class="fas fa-tools"></i>
+                  </a>
+                  <a
+                    href="https://commitlint.js.org/"
+                    class="social-link"
+                    title="Commitlint"
+                  >
+                    <i class="fas fa-check-circle"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form">
+              <h3>Quick Reference</h3>
+              <div class="quick-reference">
+                <div class="ref-item">
+                  <code>git add .</code>
+                  <span>Stage all changes</span>
+                </div>
+                <div class="ref-item">
+                  <code>git commit -m "message"</code>
+                  <span>Commit with message</span>
+                </div>
+                <div class="ref-item">
+                  <code>git push origin branch</code>
+                  <span>Push to remote</span>
+                </div>
+                <div class="ref-item">
+                  <code>git pull origin main</code>
+                  <span>Pull latest changes</span>
+                </div>
+                <div class="ref-item">
+                  <code>git log --oneline</code>
+                  <span>View commit history</span>
+                </div>
+                <div class="ref-item">
+                  <code>git status</code>
+                  <span>Check repository status</span>
+                </div>
+                <div class="ref-item">
+                  <code>git branch</code>
+                  <span>List branches</span>
+                </div>
+                <div class="ref-item">
+                  <code>git checkout -b feature</code>
+                  <span>Create new branch</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-text">
+            <p>&copy; 2024 GijutsuKnight. All rights reserved.</p>
+          </div>
+          <div class="footer-links">
+            <a href="index.html">Portfolio</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="index.html#roles">Roles</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="git-practices.html">Git Practices</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>
