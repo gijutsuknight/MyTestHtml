@@ -1,4 +1,4 @@
-# YeatTech Portfolio - Modular Structure
+# GijutsuKnight Portfolio - Modular Structure
 
 This is a modern, responsive portfolio website built with a modular architecture for better maintainability and scalability.
 

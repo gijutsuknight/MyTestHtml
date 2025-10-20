@@ -1,4 +1,4 @@
-/* YeatTech Portfolio - Main JavaScript */
+/* GijutsuKnight Portfolio - Main JavaScript */
 
 // Import modules
 import { ThemeManager } from "./modules/theme.js";

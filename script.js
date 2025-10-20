@@ -1,4 +1,4 @@
-// YeatTech Portfolio JavaScript
+// GijutsuKnight Portfolio JavaScript
 
 class Portfolio {
   constructor() {
