@@ -1,15 +1,37 @@
-# GijutsuKnight Portfolio - Modular Structure
+# GijutsuKnight Portfolio
 
-This is a modern, responsive portfolio website built with a modular architecture for better maintainability and scalability.
+A modern, responsive portfolio website showcasing the technical capabilities of GijutsuKnight - a tech professional with expertise across frontend, backend, and infrastructure domains.
+
+## 🎯 About GijutsuKnight
+
+GijutsuKnight is a versatile technology professional who embodies the role of a "knight of gijutsu (tech)" with multiple specialized roles across the technology stack:
+
+### Frontend Development
+
+- **Web Developer** - React
+- **Android Developer** - React Native, Kotlin, Java
+- **iOS Developer** - React Native, Swift, Objective-C
+- **Cross-Platform Mobile Developer** - React Native
+
+### Backend Development
+
+- **Java Backend Developer** - Spring Boot, Hibernate
+- **Python Backend Developer** - FastAPI, Flask, Django
+- **Node.js Backend Developer** - Express.js, NestJS
+- **Full Stack Developer** - React + (Spring Boot / Node.js / Python)
+
+### Infrastructure & Operations
+
+- **DevOps Engineer** - Docker, Kubernetes, CI/CD
+- **Containerization** - Docker
+- **Orchestration** - Kubernetes
+- **CI/CD** - Jenkins, GitLab CI/CD, GitHub Actions
 
 ## 📁 Project Structure
 
 ```
 MyTestHtml/
-├── index-modular.html          # Main HTML file (modular version)
-├── index.html                  # Original single-file version
-├── styles.css                  # Original single CSS file
-├── script.js                   # Original single JS file
+├── index.html                  # Main HTML file
 ├── assets/                     # Modular assets directory
 │   ├── css/                    # CSS files
 │   │   ├── main.css           # Main CSS file (imports all partials)
@@ -18,7 +40,7 @@ MyTestHtml/
 │   │       ├── reset.css      # CSS reset & base styles
 │   │       ├── base.css       # Base section styles
 │   │       ├── components.css # Reusable component styles
-│   │       ├── sections.css   # Section-specific styles
+│   │       ├── sections.css   # Section-specific styles (includes Roles)
 │   │       ├── animations.css # Animation keyframes & effects
 │   │       ├── responsive.css # Responsive design & media queries
 │   │       └── utilities.css  # Utility classes
@@ -32,6 +54,9 @@ MyTestHtml/
 │   │       ├── forms.js       # Form validation & submission
 │   │       └── skills.js      # Skills progress bars
 │   └── images/                # Image assets (placeholder)
+├── components/                 # Reusable HTML components
+├── sections/                  # HTML section partials
+├── CNAME                      # GitHub Pages custom domain
 └── README.md                  # This file
 ```
 
@@ -78,14 +103,16 @@ MyTestHtml/
 
 ## 📋 Features
 
-- **Responsive Design**: Mobile-first approach
-- **Dark/Light Theme**: Toggle between themes
-- **Smooth Animations**: CSS animations and transitions
+- **Responsive Design**: Mobile-first approach with modern CSS Grid and Flexbox
+- **Dark/Light Theme**: Toggle between themes with smooth transitions
+- **Smooth Animations**: CSS animations and transitions for enhanced UX
 - **Interactive Elements**: Hover effects and micro-interactions
-- **Form Validation**: Client-side validation with feedback
-- **Project Filtering**: Filter projects by category
-- **Skill Progress Bars**: Animated progress indicators
-- **Mobile Navigation**: Collapsible mobile menu
+- **Form Validation**: Client-side validation with real-time feedback
+- **Project Filtering**: Filter projects by category (Web Apps, Mobile, Design)
+- **Skill Progress Bars**: Animated progress indicators with percentage display
+- **Mobile Navigation**: Collapsible mobile menu with smooth transitions
+- **Roles Showcase**: Comprehensive display of technical capabilities across domains
+- **Modern Architecture**: ES6 modules and modular CSS for maintainability
 
 ## 🔧 Customization
 
@@ -101,10 +128,11 @@ Edit `assets/css/partials/variables.css` to customize:
 
 ### **Adding New Sections:**
 
-1. Create HTML structure in `index-modular.html`
+1. Create HTML structure in `index.html`
 2. Add styles to `assets/css/partials/sections.css`
 3. Create JavaScript module in `assets/js/modules/`
 4. Import module in `assets/js/main.js`
+5. Update navigation links in header and footer
 
 ### **Adding New Components:**
 
@@ -136,14 +164,15 @@ The project uses a comprehensive design system with:
 - **Component Library**: Reusable UI components
 - **Animation System**: Consistent timing and easing
 
-## 🔄 Migration from Single Files
+## 🔄 Recent Updates
 
-To migrate from the original single-file structure:
+The portfolio has been updated with:
 
-1. **CSS**: Split `styles.css` into partials
-2. **JavaScript**: Break `script.js` into modules
-3. **HTML**: Update to use modular assets
-4. **Testing**: Verify all functionality works
+1. **Roles Section**: Added comprehensive technical roles showcase
+2. **Modular Structure**: Migrated from single files to modular architecture
+3. **Enhanced Navigation**: Updated header and footer with Roles link
+4. **Improved Styling**: Enhanced visual design with better typography and spacing
+5. **Code Cleanup**: Removed obsolete files and consolidated structure
 
 ## 📈 Performance Optimizations
 
@@ -155,17 +184,26 @@ To migrate from the original single-file structure:
 
 ## 🧪 Testing
 
-Test the modular structure by:
+Test the portfolio by:
 
-1. Opening `index-modular.html` in a browser
+1. Opening `index.html` in a browser
 2. Verifying all features work correctly
-3. Testing responsive design
+3. Testing responsive design across different screen sizes
 4. Checking theme toggle functionality
 5. Validating form submission
+6. Testing navigation between sections
+7. Verifying Roles section displays correctly
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+2. **Open `index.html`** in a modern browser
+3. **For development**: Use a local server (e.g., `python -m http.server` or Live Server extension)
+4. **Customize**: Edit CSS variables and content as needed
 
 ## 📝 Notes
 
-- The modular structure is more maintainable but requires a build process for production
+- The modular structure provides better maintainability and scalability
 - ES6 modules require a local server for development (not file:// protocol)
-- Consider using a bundler for production deployment
-- The original single-file version remains available for comparison
+- All assets are optimized for performance
+- The portfolio is ready for deployment to GitHub Pages or any static hosting service
